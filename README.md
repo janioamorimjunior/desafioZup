@@ -1,6 +1,10 @@
 # desafioZup
-O presente projeto foi elaborado com o auxílio do **Protractor**, responsável pela automação, e **Allure Report**, cujo papel é gerar realtorio sobre a automação.
 
+## Descrição
+
+Este projeto trata se de uma forma de apresentar o meu trabalho para a empresa zup, foi pedido para escolher um grande portal de comércio online e automatizar testes nele, foi escolhida a Americanas, com isso esse projeto foi elaborado com o auxílio do **Protractor** (framework end-2-end), responsável pela automação, e o **Allure Report**, cujo papel é gerar realtorio sobre a automação.
+
+## Iniciando
 Para ter acesso ao **protractor** é necessário poussuir o **npm (Gerenciador de Pacotes do Node)** instalado na maquina, para executar o comando abaixo:
 ```
 npm install -g protractor
