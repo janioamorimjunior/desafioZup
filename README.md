@@ -29,7 +29,7 @@ git clone https://github.com/janioamorimjunior/desafioZup.git
 ```
 
 ## Construção
-depois de clonado, é preciso instalar as dependências do projeto, usando o comando seguinte:
+Depois de clonado, é preciso instalar as dependências do projeto, usando o comando seguinte:
 
 ```shell
 npm install
@@ -49,7 +49,7 @@ allure serve
 ```
 Logo após rodar o comando vai abrir no localHost a tela inicial do allure contendo os casos de testes feitos com gráficos
 <div align="center">
-    <img width="430" src="Allure-reports-screens/pagina-Inicia.jpeg" />
+    <img width="430" src="Allure-reports-screens/pagina-inicial.jpeg" />
     <p>Página inicial do Allure.</p>
 </div>
 
