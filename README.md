@@ -1,3 +1,4 @@
+# desafioZup
 O presente projeto foi elaborado com o auxílio do **Protractor**, responsável pela automação, e **Allure Report**, cujo papel é gerar realtorio sobre a automação.
 
 Para ter acesso ao **protractor** é necessário poussuir o **npm (Gerenciador de Pacotes do Node)** instalado na maquina, para executar o comando abaixo:
