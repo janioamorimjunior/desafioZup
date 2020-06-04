@@ -8,7 +8,7 @@ Este projeto trata se de uma forma de apresentar o meu trabalho para a empresa z
 
 Para executar o projeto, será necessário instalar os seguintes programas:
 - [npm: Necessário para para baixar o protractor](https://www.npmjs.com/get-npm)
-- [protractor: necessário para executar o projeto](https://www.protractortest.org/#/)
+- [protractor: Necessário para executar o projeto](https://www.protractortest.org/#/)
 
 Para conseguir usar o **protractor** é necessário poussuir o **npm (Gerenciador de Pacotes do Node)** instalado na maquina, para executar o comando abaixo:
 ```shell
@@ -47,7 +47,16 @@ Quando os testes forem finalizados, para ver os resultados em um relatorio é pr
 ```shell
 allure serve
 ```
+Logo após rodar o comando vai abrir no localHost a tela inicial do allure contendo os casos de testes feitos com gráficos
 <div align="center">
-    <img width="750" src="Allure-reports-screens/pagina-Inicia.jpeg" />
+    <img width="430" src="Allure-reports-screens/pagina-Inicia.jpeg" />
     <p>Página inicial do Allure.</p>
+</div>
+
+Ao clicar nas suites será mostrado todos as suites, juntas com seus casos de teste, que estes podem possuir evidências sobre a execução
+<div align="center">
+	<img width="430" src="Allure-reports-screens/suites.jpeg">
+    <p>Suites de teste</p>
+    <img width="430" src="Allure-reports-screens/caso-de-teste.jpeg">
+    <p>Caso de teste com evidência</p>
 </div>
