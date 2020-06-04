@@ -49,14 +49,14 @@ allure serve
 ```
 Logo após rodar o comando vai abrir no localHost a tela inicial do allure contendo os casos de testes feitos com gráficos
 <div align="center">
-    <img width="430" src="Allure-reports-screens/pagina-inicial.jpeg" />
+    <img width="430" src="allure-reports-screens/pagina-inicial.jpeg" />
     <p>Página inicial do Allure.</p>
 </div>
 
 Ao clicar nas suites será mostrado todos as suites, juntas com seus casos de teste, que estes podem possuir evidências sobre a execução
 <div align="center">
-	<img width="430" src="Allure-reports-screens/suites.jpeg">
+	<img width="430" src="allure-reports-screens/suites.jpeg">
     <p>Suites de teste</p>
-    <img width="430" src="Allure-reports-screens/caso-de-teste.jpeg">
+    <img width="430" src="allure-reports-screens/caso-de-teste.jpeg">
     <p>Caso de teste com evidência</p>
 </div>
