@@ -43,7 +43,7 @@ Para executar a automação, não é necessária nenhuma IDE (ambiente de desenv
 protractor
 ```
 
-Quando os testes forem finalizados, para ver os resultados em um relatorio é preciso executar o seguinte comnado 
+Quando os testes forem finalizados, para ver os resultados em um relatorio é preciso executar o seguinte comando 
 ```shell
 allure serve
 ```
