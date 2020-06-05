@@ -1,5 +1,11 @@
 # desafioZup
 
+* [Descrição](#descrição)
+* [Iniciando](#iniciando)
+* [Desenvolvimento](#desenvolvimento)
+* [Construção](#construção)
+* [Configuração](#configuração)
+
 ## Descrição
 
 O presente projeto foi elaborado atendendo ao desafio proposto durante o processo de seleção da empresa Zup, que visa a contratação para o cargo de Analista de Testes Automatizados (QA). Tal desafio consistiu no desenvolvimento de uma automação que validasse alguns cenários de teste em um site de varejo de livre escolha. Sendo assim, o projeto focou em elaborar testes no portal de comércio online www.americanas.com, os quais foram realizados com auxílio do framework de testes **Protractor**, responsável pela automação, juntamente com o **Allure Report**, cujo papel foi gerar relatórios. Siga as considerações contidas neste documento para visualizar o trabalho.
