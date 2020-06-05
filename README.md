@@ -13,7 +13,7 @@ O presente projeto foi elaborado atendendo ao desafio proposto durante o process
 ## Iniciando
 
 Para executar o projeto, será necessário instalar os seguintes programas:
-- [npm (Gerenciador de Pacotes Node): Necessário para para baixar o protractor e o webdriver-manager.](https://www.npmjs.com/get-npm)
+- [npm (Gerenciador de pacotes para ambiente Javascript): Necessário para para baixar o protractor e o webdriver-manager.](https://www.npmjs.com/get-npm)
 
 Tendo executado o **npm**, efetue o comando abaixo para a instalação do **webdriver-maneger** e o framework **protractor** :
 ```shell
