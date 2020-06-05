@@ -34,7 +34,7 @@ describe('Carrinho', async () => {
 
         let produto: Produto = await resultadoPage.selecionarProdutoAleatorio();
 
-        await  visualizacaoProdutoPage.adicionarAoCarrinho();
+        await visualizacaoProdutoPage.adicionarAoCarrinho();
 
         await carrinhoPage.produtoEstaNoCarrinho(produto.nome, produto.preco);
     });
@@ -45,7 +45,7 @@ describe('Carrinho', async () => {
 
         await resultadoPage.selecionarProdutoAleatorio();
 
-        await  visualizacaoProdutoPage.adicionarAoCarrinho();
+        await visualizacaoProdutoPage.adicionarAoCarrinho();
 
         await carrinhoPage.esvaziarCarrinho();
 
