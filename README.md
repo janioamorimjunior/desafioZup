@@ -15,7 +15,7 @@ O presente projeto foi elaborado atendendo ao desafio proposto durante o process
 Para executar o projeto, será necessário instalar os seguintes programas:
 - [npm (Gerenciador de pacotes para ambiente Javascript): Necessário para para baixar o protractor e o webdriver-manager.](https://www.npmjs.com/get-npm)
 
-Tendo executado o **npm**, efetue o comando abaixo para a instalação do **webdriver-maneger** e o framework **protractor** :
+Tendo executado o **npm**, efetue o comando abaixo para a instalação do **webdriver-maneger** e o framework **protractor**:
 ```shell
 npm install -g protractor
 ```
@@ -59,7 +59,7 @@ Feito isso, uma janela será aberta no localHost exibindo a tela inicial do allu
     <p>Página inicial do Allure.</p>
 </div>
 
-Ao clicar nas suítes será mostrado a tela que vai conter as suítes de teste, juntas com seus casos de teste e estes podem possuir evidências sobre a execução
+Ao clicar no menu “Suítes”, acontecerá o redirecionamento para uma página contendo os conjuntos de casos de testes e suas evidências de execução.
 
 <div align="center">
 	<img width="430" src="allure-reports-screens/suites.jpeg">
