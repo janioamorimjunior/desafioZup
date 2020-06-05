@@ -1,28 +1,26 @@
-import {ElementFinder, browser, protractor, by, WebElement, element, Key, ElementArrayFinder} from 'protractor';
-
+import {
+  ElementFinder,
+  browser,
+  protractor
+} from "protractor";
 
 export class SimplePage {
   timeout = 30000;
 
-  async logInfo(str: string){
-
+  async logInfo(str: string) {
     return browser.logger.info(str);
   }
 
-  async logWarn(str: string){
-
+  async logWarn(str: string) {
     return browser.logger.warn(str);
   }
 
-  async logError(str: string){
-
+  async logError(str: string) {
     return browser.logger.error(str);
   }
 
   async cliclarVariosElementos(...menus: ElementFinder[]) {
-
     for (const webElemento of menus) {
-
       await this.esperarPresencaDe(webElemento);
 
       await this.clicarElemento(webElemento);
@@ -30,7 +28,6 @@ export class SimplePage {
   }
 
   async inserirDado(elementFinder: ElementFinder, value: string) {
-
     await this.esperarVisibilidadeDo(elementFinder);
 
     await this.limparCampo(elementFinder);
@@ -39,7 +36,6 @@ export class SimplePage {
   }
 
   async limparCampo(elementFinder: ElementFinder) {
-
     await elementFinder.clear();
   }
 
@@ -48,11 +44,13 @@ export class SimplePage {
   }
 
   async pegarIdCampo(elementFinder: ElementFinder) {
-    return await elementFinder.getAttribute('id');
+    return await elementFinder.getAttribute("id");
   }
 
-  async esperarElementoFicarClicavel(elementFinder: ElementFinder, optMessage ?: string) {
-
+  async esperarElementoFicarClicavel(
+      elementFinder: ElementFinder,
+      optMessage?: string
+  ) {
     return browser.wait(
         protractor.ExpectedConditions.elementToBeClickable(elementFinder),
         this.timeout,
@@ -60,18 +58,22 @@ export class SimplePage {
     );
   }
 
-  async esperarVisibilidadeDo(elementFinder: ElementFinder, optMessage?: string) {
-
-    await browser.wait(
-      protractor.ExpectedConditions.visibilityOf(elementFinder),
-      this.timeout,
-      optMessage
-    )
-    .catch((err) => { this.logError(err)});
+  async esperarVisibilidadeDo(
+      elementFinder: ElementFinder,
+      optMessage?: string
+  ) {
+    await browser
+        .wait(
+            protractor.ExpectedConditions.visibilityOf(elementFinder),
+            this.timeout,
+            optMessage
+        )
+        .catch((err) => {
+          this.logError(err);
+        });
   }
 
   async esperarPresencaDe(elementFinder: ElementFinder, optMessage?: string) {
-
     return browser.wait(
         protractor.ExpectedConditions.presenceOf(elementFinder),
         this.timeout,
@@ -80,91 +82,81 @@ export class SimplePage {
   }
 
   async pegarAtributo(elementFinder: any, atributo: string) {
-
     return elementFinder.getAttribute(atributo);
   }
 
-  async esperarInvisibilidadeDe(elementFinder: ElementFinder, optMessage?: string) {
-
+  async esperarInvisibilidadeDe(
+      elementFinder: ElementFinder,
+      optMessage?: string
+  ) {
     return browser.wait(
         protractor.ExpectedConditions.invisibilityOf(elementFinder),
-        120000,
+        this.timeout,
         optMessage
     );
   }
 
   esperarEmMilisegundos(timeout: number) {
-
     return browser.sleep(timeout);
   }
 
   pegarTituloPagina() {
-
     return browser.getTitle();
   }
 
   pegarItemDoLocalStorage(item: string) {
-
-    return this.executeScript('return localStorage.getItem("' + item  + '");');
+    return this.executeScript('return localStorage.getItem("' + item + '");');
   }
 
   executeScript(script: string | Function) {
-
     return browser.executeScript(script);
   }
 
   async elementoEstaPresente(elementFinder: ElementFinder) {
-
     return await elementFinder.isPresent();
   }
 
   pegarTexto(elementFinder: ElementFinder) {
-
     return elementFinder.getText().then((text) => {
-
-      return text.replace(/\s/g, ' ');
+      return text.replace(/\s/g, " ");
     });
   }
 
   pressionarBotao(key: string) {
-
     return browser.actions().sendKeys(key).perform();
   }
 
   async pegarTextoDeInputs(elementFinder: ElementFinder) {
-
     await this.esperarVisibilidadeDo(elementFinder);
 
-    return await elementFinder.getAttribute('value');
+    return await elementFinder.getAttribute("value");
   }
 
   async irAteElemento(elementFinder: ElementFinder) {
-
     await this.esperarElementoFicarClicavel(elementFinder);
 
     this.esperarEmMilisegundos(1000);
 
-    await browser.executeScript('arguments[0].scrollIntoView(false);', elementFinder.getWebElement());
+    await browser.executeScript(
+        "arguments[0].scrollIntoView(false);",
+        elementFinder.getWebElement()
+    );
   }
 
   scrollUP() {
-
-    browser.executeScript('window.scrollTo(0,0);');
+    browser.executeScript("window.scrollTo(0,0);");
   }
 
   async scrollDown() {
-
-    return await browser.executeScript('window.scrollTo(0,10000);');
+    return await browser.executeScript("window.scrollTo(0,10000);");
   }
 
   async clicarElemento(elementFinder: ElementFinder, optMessage?: string) {
-
-     await this.esperarElementoFicarClicavel( elementFinder, optMessage);
-     await elementFinder.click();
-
+    await this.esperarElementoFicarClicavel(elementFinder, optMessage);
+    await elementFinder.click();
   }
 
-  async isNotClickable(element: ElementFinder) {
+  async naoEhClicavel(element: ElementFinder) {
     return element.isPresent().then((isPresent) => {
       if (isPresent) {
         return element.isDisplayed().then((isDisplayed) => {
@@ -179,28 +171,26 @@ export class SimplePage {
   }
 
   async clicarComBotaoDireito(elementFinder: ElementFinder) {
-
-    return browser.actions().mouseMove(elementFinder).click(protractor.Button.RIGHT).perform();
+    return browser
+        .actions()
+        .mouseMove(elementFinder)
+        .click(protractor.Button.RIGHT)
+        .perform();
   }
 
   duploClick(elementFinder: ElementFinder) {
-
     return browser.actions().mouseMove(elementFinder).doubleClick().perform();
   }
 
   recarregarPagina() {
-
     browser.navigate().refresh();
   }
 
   async pegarUrlAtual() {
-
     return browser.getCurrentUrl();
   }
 
   async navegarAte(url: string) {
-
     await browser.get(url);
   }
-
 }

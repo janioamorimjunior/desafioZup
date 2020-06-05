@@ -1,12 +1,10 @@
-import {AmericanasInicialPage} from "../paginas/inicialPage.po";
-import {AmericanasResultadoPesquisaPage} from "../paginas/resultadoPesquisaPage.po";
-import {VisualizacaoProdutoPagePo} from "../paginas/visualizacaoProdutoPage.po";
-import {CarrinhoPagePo} from "../paginas/carrinhoPage.po";
-import {Produto} from "../compartilhado/objetos/produto";
+import { AmericanasInicialPage } from "../paginas/inicialPage.po";
+import { AmericanasResultadoPesquisaPage } from "../paginas/resultadoPesquisaPage.po";
+import { VisualizacaoProdutoPagePo } from "../paginas/visualizacaoProdutoPage.po";
+import { CarrinhoPagePo } from "../paginas/carrinhoPage.po";
+import { Produto } from "../compartilhado/objetos/produto";
 
-
-describe('Carrinho', async () => {
-
+describe("Carrinho", async () => {
     const inicialPage: AmericanasInicialPage = new AmericanasInicialPage();
 
     const resultadoPage: AmericanasResultadoPesquisaPage = new AmericanasResultadoPesquisaPage();
@@ -16,21 +14,17 @@ describe('Carrinho', async () => {
     const carrinhoPage: CarrinhoPagePo = new CarrinhoPagePo();
 
     beforeEach(async () => {
-
-        inicialPage.navegarAte('https://www.americanas.com.br/');
+        inicialPage.navegarAte("https://www.americanas.com.br/");
     });
 
-    it('Validar carrinho vazio no primeiro acesso da aplicação', async () => {
-
+    it("Validar carrinho vazio no primeiro acesso da aplicação", async () => {
         await inicialPage.irParaCarrinho();
 
         await carrinhoPage.carrinhoEstaVazioTelaInicial();
-
     });
 
-    it('Adicionar um produto no carrinho e validar o preço e o produto', async () => {
-
-        await inicialPage.pesquisar('gundam');
+    it("Adicionar um produto no carrinho e validar o preço e o produto", async () => {
+        await inicialPage.pesquisar("gundam");
 
         let produto: Produto = await resultadoPage.selecionarProdutoAleatorio();
 
@@ -39,9 +33,8 @@ describe('Carrinho', async () => {
         await carrinhoPage.produtoEstaNoCarrinho(produto.nome, produto.preco);
     });
 
-    it('Esvaziar carrinho e validar carrinho vazio', async () => {
-
-        await inicialPage.pesquisar('gundam');
+    it("Esvaziar carrinho e validar carrinho vazio", async () => {
+        await inicialPage.pesquisar("gundam");
 
         await resultadoPage.selecionarProdutoAleatorio();
 

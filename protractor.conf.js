@@ -43,14 +43,14 @@ exports.config = {
                 displayNumber: true
             },
             spec: {
-                displayStacktrace: true,
+                displayStacktrace: 'pretty',
                 displayErrorMessages: true,
                 displayFailed: true,
                 displayDuration: true
             },
             summary: {
                 displayErrorMessages: true,
-                displayStacktrace: false,
+                displayStacktrace: 'pretty',
                 displaySuccessful: true,
                 displayFailed: true,
                 displayDuration: true
